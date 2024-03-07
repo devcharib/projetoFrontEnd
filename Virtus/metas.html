@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" 
+    crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous"> -->
+    <!-- Bootstrap Localmente -->
+    <link rel="stylesheet" href="/Virtus/style.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- ICONS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Dashboard</title>
+</head>
+
+<body class="bg-body-secondary">
+    <!-- HEADER -->
+    <nav class="navbar bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">VirtUs</a>
+            <a href="" class="btn text-white">Sair</a>
+        </div>
+    </nav>
+    <!-- AJUSTE MOBILE -->
+    <div style="padding-top: 50px;"></div>
+
+    <!-- MENU MOBILE -->
+    <nav class="navbar ">
+        <ul
+            class="d-flex  bg-primary d-md-none d-lg-none w-100 ps-3 pt-3 pb-3 justify-content-around list-unstyled fixed-bottom navbar-nav flex-row ">
+            <li class="nav-item">
+                <a class="navbar-brand" href="/Virtus/dashboard.html">
+                    <i class="bi bi-bar-chart-line btn text-bg-secondary  "></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Virtus/metas.html" class="navbar-brand">
+                    <i class="bi bi-pencil-square btn text-bg-secondary active"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Virtus/relatorio.html" class="navbar-brand">
+                    <i class="bi bi-calendar3 btn text-bg-secondary"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Virtus/cadastro.html" class="navbar-brand">
+                    <i class="bi bi-journal-plus btn text-bg-secondary"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Virtus/configuracoes.html" class="navbar-brand">
+                    <i class="bi bi-gear btn text-bg-secondary"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Principal -->
+    <div class="d-flex bg-secondary-subtle p-1">
+        <!-- MENU DESKTOP -->
+        <div class="d-none d-md-block col col-lg-2 col-md-3  bg-secondary-subtle ">
+            <nav class="nav-fill list-unstyled position-fixed">
+                <ul class="navbar-nav d-none d-md-block  ">
+                    <li class="nav-item">
+                        <a href="/Virtus/dashboard.html"
+                            class="btn btn-outline-primary fw-semibold fs-5 text-end w-100 rounded-bottom-0 ">
+                            Dashboard
+                            <i class="bi bi-bar-chart-line ms-2 "></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Virtus/metas.html"
+                            class="btn btn-outline-primary fw-semibold fs-5 text-end w-100 rounded-0 active">
+                            Apontamentos
+                            <i class="bi bi-pencil-square ms-2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Virtus/relatorio.html"
+                            class="btn btn-outline-primary fw-semibold fs-5 text-end w-100 rounded-0 ">
+                            Relatório
+                            <i class="bi bi-calendar3 ms-2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Virtus/cadastro.html"
+                            class="btn btn-outline-primary fw-semibold fs-5 text-end w-100 rounded-0 ">
+                            Cadastros
+                            <i class="bi bi-journal-plus ms-2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Virtus/configuracoes.html"
+                            class="btn btn-outline-primary fw-semibold fs-5 text-end w-100 rounded-top-0 ">
+                            Configurações
+                            <i class="bi bi-gear ms-2"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- CONTEUDO -->
+        <div class="container bg-secondary-subtle d-flex col-lg-9">
+            <!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 "> -->
+            <div class="col">
+                <!-- MENU PAGE -->
+                <div class="row btn-group mb-3">
+
+                        <div class="col  dropdown  ">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                data-bs-auto-close="true" aria-expanded="false">
+                                Produção
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/Virtus/metas.html">Metas</a></li>
+                                <li><a class="dropdown-item" href="#">Menu item 2</a></li>
+                                <li><a class="dropdown-item" href="#">Menu item 3</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <a href="/Virtus/qualidade.html" class="btn btn-primary">Qualidade</a>
+                        </div>
+                        <div class="col ">
+                            <a href="/Virtus/eventos.html" class="btn btn-primary">Eventos</a>
+                        </div>
+                </div>
+                <!-- CONTEUDO -->
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body overflow-auto" style="height: 24rem;">
+                                <table class="table caption-top table-striped table-group-divider mb-0">
+                                    <caption>Resumo das Metas</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Data</th>
+                                            <th scope="col">Setor</th>
+                                            <th scope="col">Máquina</th>
+                                            <th scope="col">Meta</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>04/03/2024</td>
+                                            <td>Líquido</td>
+                                            <td>Reator 1</td>
+                                            <td>2.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>04/03/2024</td>
+                                            <td>Líquido</td>
+                                            <td>Reator 2</td>
+                                            <td>2.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>04/03/2024</td>
+                                            <td>Líquido</td>
+                                            <td>Reator 3</td>
+                                            <td>2.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>04/03/2024</td>
+                                            <td>Líquido</td>
+                                            <td>Reator 3</td>
+                                            <td>2.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>04/03/2024</td>
+                                            <td>Líquido</td>
+                                            <td>Reator 3</td>
+                                            <td>2.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>04/03/2024</td>
+                                            <td>Líquido</td>
+                                            <td>Reator 3</td>
+                                            <td>2.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>04/03/2024</td>
+                                            <td>Líquido</td>
+                                            <td>Reator 3</td>
+                                            <td>2.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>04/03/2024</td>
+                                            <td>Líquido</td>
+                                            <td>Reator 3</td>
+                                            <td>2.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>04/03/2024</td>
+                                            <td>Líquido</td>
+                                            <td>Reator 3</td>
+                                            <td>2.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mt-2 mb-2 d-flex">
+                            <a href="/Virtus/criarMeta.html" class="btn btn-outline-primary">Nova Meta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- AJUSTE/MOBILE -->
+    <div class="d-lg-none d-md-none" style="height: 70px;"></div>
+
+
+
+
+
+
+
+
+    <!-- GERAR GRÁFICOS -->
+    <script src="/Virtus/charts1.js"></script>
+
+</body>
+
+</html>
